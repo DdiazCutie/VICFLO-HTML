@@ -329,7 +329,11 @@ section
 }
 .header.scrolled .header_content
 {
-	height: 70px;
+	height: 70px;	
+}
+.header.scrolled .header_conteiner
+{
+	border-bottom: #1b1b1b 10x;	
 }
 .logo a
 {
