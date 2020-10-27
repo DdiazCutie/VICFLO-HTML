@@ -2,7 +2,7 @@
     const app = express();
     
     app.get ('/', (req, res) => {
-        res.send('index.html')
+        res.send('./index.html')
     });
 
     app.listen(3000);
