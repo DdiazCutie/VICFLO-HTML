@@ -401,3 +401,14 @@ form.sign-in-form {
     left: 50%;
   }
 }
+
+
+.content a{
+  font-style: none;
+  color: white;
+  text-decoration: none;
+}
+
+.content h1:hover{
+  color: #B3BBBD;
+}
