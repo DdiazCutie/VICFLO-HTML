@@ -5,7 +5,6 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" href="images/LOGO DONE.ico">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Sublime project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -32,7 +31,8 @@
 									<li><a href="#">TABLETS</a></li>
 									<li><a href="#">ACCESORIOS</a></li>
 									<li><a href="#">ALL IN ONE</a></li>
-									<li><a href="#">REGISTRATE</a></li>
+									<li><a href="login.html">REGISTRATE</a></li>
+									<li><a href="#" id="logout">SALIR</a></li>
 								</ul>
 							</nav>
 							<div class="header_extra ml-auto">
@@ -321,6 +321,18 @@
 	</footer>
 </div>
 
+<!-- FIREBASE -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script src="js/firebaseConfig.js"></script>
+
+<!-- Compiled JavaScript -->
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>
@@ -334,5 +346,7 @@
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/index.js"></script>
+<script src="js/auth.js"></script>
 </body>
 </html>
