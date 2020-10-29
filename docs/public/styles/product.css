@@ -310,6 +310,10 @@
 {
 	background: #376098;
 }
+.cart_button_pdf::after
+{
+	background: red;
+}
 .details_share
 {
 	margin-top: 51px;
