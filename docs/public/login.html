@@ -15,28 +15,28 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup" id="signin-signup">
-          <form action="#" class="sign-in-form" id="singn-in-form">
+          <form  class="sign-in-form" id="sign-in-form">
             <h2 class="title">Iniciar Sesión</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Usuario" />
+              <input type="email" placeholder="Correo" id="sign-in-email"/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Contraseña" />
+              <input type="password" placeholder="Contraseña" id="sign-in-password"/>
             </div>
-            <button class="btn solid" >Ingresar</button>
+            <button type="submit" class="btn solid" id="btn-sign-in">Ingresar</button>
             <p class="social-text">También puedes ingresar con :</p>
             <div class="social-media">
-              <button  class="social-icon" id='googleLogin'>
+              <button type="button" class="social-icon" id='googleLogin'>
                 <i class="fab fa-facebook-f"></i>
               </button>
-              <button  class="social-icon" id='facebookLogin'>
+              <button type="button" class="social-icon" id='facebookLogin'>
                 <i class="fab fa-google"></i>
               </button>
             </div>
           </form>
-          <form action="#" class="sign-up-form" id="sign-up-form">
+          <form  class="sign-up-form" id="sign-up-form">
             <h2 class="title">Crear Cuenta</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
@@ -46,7 +46,7 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Contraseña" id="sign-up-password" required/>
             </div>
-            <button class="btn">REGISTRAR</button>
+            <button class="btn" id="btn-sign-up">REGISTRAR</button>
           </form>
         </div>
       </div>
