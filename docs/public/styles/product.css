@@ -302,9 +302,13 @@
 	vertical-align: middle;
 	margin-left: 13px;
 }
-.cart_button::after
+.cart_button_insta::after
 {
-	background: #1b1b1b;
+	background: #df327b;
+}
+.cart_button_fb::after
+{
+	background: #376098;
 }
 .details_share
 {
