@@ -17,7 +17,33 @@
 <link rel="stylesheet" type="text/css" href="styles/product_responsive.css">
 </head>
 <body>
+	<!-- burbuja de chat -->
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>
+	  window.fbAsyncInit = function() {
+		FB.init({
+		  xfbml            : true,
+		  version          : 'v8.0'
+		});
+	  };
 
+	  (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<!-- Your Chat Plugin code -->
+	<div class="fb-customerchat"
+	  attribution=setup_tool
+	  page_id="113747617189393"
+theme_color="#000000"
+logged_in_greeting="Hola, como podría ayudarte?"
+logged_out_greeting="Hola, como podría ayudarte?">
+	</div>
 <div class="super_container">
 
 	<!-- Header -->
@@ -111,8 +137,8 @@
 				<div class="col-lg-6">
 					<div class="details_content">
 						<div class="details_name">LENOVO - THINKPAD X390</div>
-						<div class="details_discount">$890</div>
-						<div class="details_price">$670</div>
+						<div class="details_discount"></div>
+						<div class="details_price"></div>
 
 						<!-- In Stock -->
 						<div class="in_stock_container">
@@ -155,11 +181,11 @@
 			<div class="row description_row">
 				<div class="col">
 					<div class="description_title_container">
-						<div class="description_title">Description</div>
+						<div class="description_title"> <strong>¿Quiénes Somos?</strong></div>
 						<hr>
 					</div>
 					<div class="description_text">
-						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Phasellus id nisi quis justo tempus mollis sed et dui. In hac habitasse platea dictumst. Suspendisse ultrices mauris diam. Nullam sed aliquet elit. Mauris consequat nisi ut mauris efficitur lacinia.</p>
+						<h3>Somos una empresa 100% Peruana enfocada al público entusiasta de la tecnología y la productividad con equipos ligeros.</h3>
 					</div>
 				</div>
 			</div>

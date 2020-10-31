@@ -19,6 +19,34 @@
 </head>
 <body>
 
+		<!-- burbuja de chat -->
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>
+	  window.fbAsyncInit = function() {
+		FB.init({
+		  xfbml            : true,
+		  version          : 'v8.0'
+		});
+	  };
+
+	  (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<!-- Your Chat Plugin code -->
+	<div class="fb-customerchat"
+	  attribution=setup_tool
+	  page_id="113747617189393"
+theme_color="#000000"
+logged_in_greeting="Hola, como podría ayudarte?"
+logged_out_greeting="Hola, como podría ayudarte?">
+	</div>
+
 <div class="super_container">
 
 	<!-- Header -->
@@ -126,10 +154,25 @@
 							<div class="product_image"><img src="images/audifonos-GXD0S50936/headphones-GXD0S50936.jpg" alt=""></div>
 							<div class="product_content">
 								<div class="product_title"><a href="audifonos.html">100 in-Ear Headphones </a></div>
-								<div class="product_price">$670</div>
+								<div class="product_price"></div>
 							</div>
 						</div>
 
+						<div class="product">
+							<div class="product_image"><img src="images/mouse-GX30K79401/mouse-GX30K79401.jpg" alt=""></div>
+							<div class="product_content">
+								<div class="product_title"><a href="mouse2.html">Mouse GX30K79401 </a></div>
+								<div class="product_price"></div>
+							</div>
+						</div>
+
+						<div class="product">
+							<div class="product_image"><img src="images/mouse-GY50R91292/GY50R91292.jpg" alt=""></div>
+							<div class="product_content">
+								<div class="product_title"><a href="mouse.html">Mouse GY50R91292</a></div>
+								<div class="product_price"></div>
+							</div>
+						</div>
 						
 						<!-- Product -->
 

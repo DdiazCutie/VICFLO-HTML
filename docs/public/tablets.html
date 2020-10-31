@@ -18,6 +18,33 @@
 <link rel="stylesheet" type="text/css" href="styles/categories_responsive.css">
 </head>
 <body>
+	<!-- burbuja de chat -->
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>
+	  window.fbAsyncInit = function() {
+		FB.init({
+		  xfbml            : true,
+		  version          : 'v8.0'
+		});
+	  };
+
+	  (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<!-- Your Chat Plugin code -->
+	<div class="fb-customerchat"
+	  attribution=setup_tool
+	  page_id="113747617189393"
+theme_color="#000000"
+logged_in_greeting="Hola, como podría ayudarte?"
+logged_out_greeting="Hola, como podría ayudarte?">
+	</div>
 
 <div class="super_container">
 
@@ -96,17 +123,17 @@
 					
 					<!-- Product Sorting -->
 					<div class="sorting_bar d-flex flex-md-row flex-column align-items-md-center justify-content-md-start">
-						<div class="results">Showing <span>12</span> results</div>
+						<div class="results">Mostrar <span>0</span> resultados</div>
 						<div class="sorting_container ml-md-auto">
 							<div class="sorting">
 								<ul class="item_sorting">
 									<li>
-										<span class="sorting_text">Sort by</span>
+										<span class="sorting_text">Ordenar por</span>
 										<i class="fa fa-chevron-down" aria-hidden="true"></i>
 										<ul>
-											<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>Default</span></li>
-											<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "price" }'><span>Price</span></li>
-											<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "stars" }'><span>Name</span></li>
+											<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>Predeterminado</span></li>
+											<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "price" }'><span>Precio</span></li>
+											<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "stars" }'><span>Nombre</span></li>
 										</ul>
 									</li>
 								</ul>
