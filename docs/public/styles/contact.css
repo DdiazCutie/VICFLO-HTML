@@ -149,7 +149,7 @@
 }
 .contact_button:hover span
 {
-	color: #FFFFFF;
+	color: red;
 }
 .contact_info_section:not(:first-child)
 {
