@@ -273,6 +273,7 @@ section
 	left: 0;
 	width: 100%;
 	z-index: 100;
+	
 }
 .header_container
 {
@@ -283,12 +284,13 @@ section
 .header_content
 {
 	width: 100%;
-	height: 130px;
+	height: 140px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
+	
 }
 .header.scrolled .header_content
 {
@@ -296,7 +298,7 @@ section
 }
 .header.scrolled .header_conteiner
 {
-	border-bottom: #1b1b1b 10x;	
+	border-bottom: #1b1b1b 2px;
 }
 .logo a
 {
@@ -315,7 +317,7 @@ section
 }
 .main_nav
 {
-	margin-left: 156px;
+	margin-left: 130px;
 }
 .main_nav > ul > li
 {
@@ -324,13 +326,13 @@ section
 }
 .main_nav > ul > li:not(:last-child)
 {
-	margin-right: 46px;
+	margin-right: 35px;
 }
 .main_nav > ul > li > a
 {
 	font-size: 16px;
-	font-weight: 600;
-	color: #767676;
+	font-weight: 550;
+	color: #1b1b1b;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -340,7 +342,7 @@ section
 .main_nav > ul > li > a:hover,
 .main_nav > ul > li.active > a
 {
-	color: #1b1b1b;
+	color: #6cbf28;
 }
 .main_nav ul li.hassubs::after
 {
@@ -407,75 +409,6 @@ section
 	color: #1b1b1b;
 }
 
-.shopping_cart
-{
-	display: inline-block;
-}
-.shopping_cart a svg
-{
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	vertical-align: middle;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.shopping_cart a:hover svg,
-.shopping_cart a:hover div
-{
-	fill: #e95a5a;
-	color: #e95a5a;
-}
-.shopping_cart a div
-{
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 14px;
-	font-weight: 500;
-	color: #1b1b1b;
-	margin-left: 13px;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.shopping_cart a div span
-{
-	margin-left: 4px;
-}
-.search
-{
-	display: inline-block;
-	margin-left: 51px;
-	cursor: pointer;
-	vertical-align: sub;
-	-webkit-transform: translateY(-1px);
-	-moz-transform: translateY(-1px);
-	-ms-transform: translateY(-1px);
-	-o-transform: translateY(-1px);
-	transform: translateY(-1px);
-}
-.search_icon
-{
-	width: 13px;
-	height: 13px;
-}
-.search_icon svg
-{
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.search_icon:hover svg
-{
-	fill: #e95a5a;
-}
 .hamburger
 {
 	display: none;
@@ -493,67 +426,33 @@ section
 	font-size: 18px;
 	color: #1b1b1b;
 }
-.search_panel
+
+.header_extra .logout_icon , .header_extra .user_icon 
 {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background: #e4e4e4;
-	z-index: -1;
+	font-size: 17px;
+	color: #6cbf28;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 }
-.search_panel.active
+
+.header_extra .logout_icon:hover, 
+.header_extra .user_icon:hover,
+.header_extra .logout_icon:active,
+.header_extra .user_icon:active
 {
-	bottom: -80px;
+	color: #767676;
+	
 }
-.search_panel_content
-{
-	height: 80px;
+
+.header_extra li{
+	text-decoration: none;
 }
-.search_input
-{
-	width: 300px;
-	height: 40px;
-	border: none;
-	outline: none;
-	border-radius: 3px;
-	padding-left: 20px;
-}
-.search_input::-webkit-input-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #767676 !important;
-}
-.search_input:-moz-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #767676 !important;
-}
-.search_input::-moz-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #767676 !important;
-} 
-.search_input:-ms-input-placeholder
-{ 
-	font-size: 14px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #767676 !important;
-}
-.search_input::input-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #767676 !important;
-}
+
+
+
 .header_social
 {
 	position: absolute;
@@ -766,7 +665,7 @@ section
 .icon_boxes
 {
 	width: 100%;
-	padding-top: 99px;
+	padding-top: 70px;
 	padding-bottom: 99px;
 	background: #FFFFFF;
 	z-index: 2;
@@ -795,12 +694,16 @@ section
 {
 	font-size: 18px;
 	font-weight: 500;
-	color: #1b1b1b;
-	margin-top: 33px;
+	color: #6cbf28;
+	margin-top: 37px;
 }
 .icon_box_text
 {
-	margin-top: 20px;
+	margin-top: 17px;
+}
+.icon_box_text p{
+	color: black;
+	font-size: 16px;
 }
 
 
