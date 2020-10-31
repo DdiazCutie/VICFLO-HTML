@@ -793,7 +793,7 @@ section
     left: 0;
     width: 150%;
     height: 100%;
-    background: #1b1b1b;
+    background: #6cbf28;
     z-index: 0;
     opacity: 0;
     -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
