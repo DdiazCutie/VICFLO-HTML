@@ -514,6 +514,9 @@ section
 	height: 0px;
 	padding-top: 130px;
 }
+
+
+
 .menu.active .menu_container
 {
 	height: 500px;
@@ -574,6 +577,7 @@ section
 {
 	display: none;
 	margin-left: 8px;
+	margin-bottom: 10px;
 }
 .page_menu_item.has-children > a > i
 {
@@ -613,7 +617,7 @@ section
 }
 .page_menu_selection li:last-child a
 {
-	border-bottom: none;
+	border-bottom: 10px;
 }
 .menu_social
 {
