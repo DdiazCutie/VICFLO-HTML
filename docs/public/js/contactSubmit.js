@@ -7,43 +7,44 @@ var firebaseConfig = {
     messagingSenderId: "909526137925",
     appId: "1:909526137925:web:b5b63ba763c3e64186772c"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  
+firebase.initializeApp(firebaseConfig);
 
-var messagesRef = firebase.database().ref('messages')
+var messagesRef = firebase.database().ref('messages');
 
-document.getElementById('contact_form').addEventListener('submit',submitForm);
+// Listen for form submit
+document.getElementById('contact_form').addEventListener('submit', submitForm);
 
+// Submit form
 function submitForm(e){
-    e.preventDefault();
+  e.preventDefault();
 
-    var nombresCompletos = getInputValue('contact_nombre');
-    var DNI_RUC = getInputValue('contact_DNI_RUC');
-    var asunto = getInputValue('contact_asunto');
-    var mensaje = getInputValue('contact_mensaje');
+  // Get values
+  var name = getInputVal('contact_nombre');
+  var document = getInputVal('contact_DNI_RUC');
+  var affair = getInputVal('contact_asunto');
+  var message = getInputVal('contact_mensaje');
 
-    saveMessage(nombresCompletos, DNI_RUC, asunto, mensaje);
+  // Save message
+  saveMessage(name, document, affair, message);
 
-    document.querySelector('.alert_form_contact').style.display = 'block';
 
-    setTimeout(function(){
-        document.querySelector('.alert_form_contact').style.display = 'none';
-    },3000);
-
-    document.getElementById('contact_form').reset();
-
+  // Clear form
+  document.getElementById('contactForm').reset();
 }
 
-function getInputValue(id){
-    return document.getElementById(id).value;
+// Function to get get form values
+function getInputVal(id){
+  return document.getElementById(id).value;
 }
 
-function saveMessage(nombresCompletos, DNI_RUC, asunto, mensaje){
-    var newMessageRef = messagesRef.push();
-    newMessageRef.set({
-        nombresCompletos: nombresCompletos,
-        DNI_RUC: DNI_RUC,
-        asunto: asunto,
-        mensaje: mensaje
-    })
+// Save message to firebase
+function saveMessage(name, document, affair, message){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name,
+    document:document,
+    affair:affair,
+    message:message
+  });
 }

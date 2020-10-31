@@ -3,10 +3,7 @@
 <head>
 <title>VICFLO</title>
 <meta charset="utf-8">
-<meta name="description" content="Somos una empresa 100% Peruana enfocada al público entusiasta de la tecnología y la productividad con equipos ligeros" />
-
 <link rel="shortcut icon" href="images/LOGO DONE.ico">
-<link href="plugins/fontawesome-free-5.15.1-web/css/all.min.css" rel="stylesheet" type="text/css">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Sublime project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +14,7 @@
 <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 </head>
 <body>
-
-		<!-- burbuja de chat -->
+<!-- burbuja de chat -->
 	<!-- Load Facebook SDK for JavaScript -->
 	<div id="fb-root"></div>
 	<script>
@@ -41,11 +37,10 @@
 	<div class="fb-customerchat"
 	  attribution=setup_tool
 	  page_id="113747617189393"
-theme_color="#000000"
+theme_color="#0A7CFF"
 logged_in_greeting="Hola, como podría ayudarte?"
 logged_out_greeting="Hola, como podría ayudarte?">
 	</div>
-
 <div class="super_container">
 
 	<!-- Header -->
@@ -63,7 +58,7 @@ logged_out_greeting="Hola, como podría ayudarte?">
 									<li class="page_menu_item menu_mm"><a href="tablets.html">TABLETS</a></li>
 									<li class="page_menu_item menu_mm"><a href="accesories.html">ACCESORIOS</a></li>
 									<li class="page_menu_item menu_mm"><a href="allinone.html">TODO EN UNO</a></li>
-									<li class="page_menu_item menu_mm"><a href="contact.html">CONTACTO</a></li>
+									<li class="page_menu_item menu_mm"><a href="contact.html">CONTACTO<i class="fa fa-angle-down"></i></a></li>
 								</ul>
 							</nav>
 							<div class="header_extra ml-auto">
@@ -94,21 +89,21 @@ logged_out_greeting="Hola, como podría ayudarte?">
 				</div>
 				<ul class="page_menu_nav menu_mm">
 					<li class="page_menu_item menu_mm"><a href="laptops.html">LAPTOPS</a></li>
-					<li class="page_menu_item menu_mm"><a href="tablets.html">TABLETS</a></li>
-					<li class="page_menu_item menu_mm"><a href="accesories.html">ACCESORIOS</a></li>
-					<li class="page_menu_item menu_mm"><a href="allinone.html">TODO EN UNO</a></li>
-					<li class="page_menu_item menu_mm"><a href="contact.html">CONTACTO</a></li>
+									<li class="page_menu_item menu_mm"><a href="tablets.html">TABLETS</a></li>
+									<li class="page_menu_item menu_mm"><a href="accesories.html">ACCESORIOS</a></li>
+									<li class="page_menu_item menu_mm"><a href="allinone.html">TODO EN UNO</a></li>
+									<li class="page_menu_item menu_mm"><a href="contact.html">CONTACTO<i class="fa fa-angle-down"></i></a></li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 
-		<div class="footer_social ml-lg-auto">
+		<div class="menu_social">
 			<ul>
-				<li><a href="https://www.instagram.com/vf_vicflo/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-				<li><a href="https://www.facebook.com/VF-Vicflo-113747617189393" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-				<li><a href="tel:+51-"><i class="fa fa-phone "></i></a></li>
+				<li><a href="https://www.instagram.com/vf_vicflo/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.facebook.com/VF-Vicflo-113747617189393" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="tel:+51-"><i class="fa fa-phone " aria-hidden="true"></i></a></li>
 			</ul>
 		</div>
 	</div>
@@ -164,10 +159,11 @@ logged_out_greeting="Hola, como podría ayudarte?">
 						<input type="text" id="contact_asunto" class="contact_input">
 					</div>
 					<div>
-						<label for="contact_mensaje">Mensaje</label>
+						<label for="contact_mensaje" cols="30"
+						rows="10">Mensaje</label>
 						<textarea id="contact_mensaje" class="contact_input contact_textarea" required="required"></textarea>
 					</div>
-					<button class="button contact_button"><span>Enviar Mensaje</span></button>
+					<button type="submit" class="button contact_button"><span>Enviar Mensaje</span></button>
 				</form>
 			</div>
 		</div>
@@ -219,9 +215,9 @@ logged_out_greeting="Hola, como podría ayudarte?">
 						
 						<div class="footer_social ml-lg-auto">
 							<ul>
-								<li><a href="https://www.instagram.com/vf_vicflo/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="https://www.facebook.com/VF-Vicflo-113747617189393" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="tel:+51-"><i class="fa fa-phone "></i></a></li>
+								<li><a href="https://www.instagram.com/vf_vicflo/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="https://www.facebook.com/VF-Vicflo-113747617189393" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="tel:+51-"><i class="fa fa-phone " aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -231,6 +227,8 @@ logged_out_greeting="Hola, como podría ayudarte?">
 	</footer>
 </div>
 
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>
@@ -242,5 +240,6 @@ logged_out_greeting="Hola, como podría ayudarte?">
 <script src="plugins/easing/easing.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="js/contact.js"></script>
+<script src="js/contactSubmit.js"></script>
 </body>
 </html>
