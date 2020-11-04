@@ -16,7 +16,6 @@ input {
   width: 100%;
   background-color: #fff;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 .forms-container {
@@ -46,7 +45,6 @@ form {
   flex-direction: column;
   padding: 0rem 5rem;
   transition: all 0.2s 0.7s;
-  overflow: hidden;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
@@ -67,12 +65,12 @@ form.sign-in-form {
 }
 
 .input-field {
-  max-width: 380px;
+  max-width: 400px;
   width: 100%;
   background-color: #f0f0f0;
-  margin: 10px 0;
+  margin: 24px 0;
   height: 55px;
-  border-radius: 55px;
+  border-radius: 50px;
   display: grid;
   grid-template-columns: 15% 85%;
   padding: 0 0.4rem;
@@ -87,14 +85,55 @@ form.sign-in-form {
   font-size: 1.1rem;
 }
 
+.fa-check-circle,
+.fa-exclamation-circle {
+  visibility: hidden;
+  position: absolute;
+  margin-left: 360px;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field small {
+  color: #e74c3c;
+  visibility: hidden;
+  bottom: 0;
+  left: 0;
+}
+
 .input-field input {
+  max-width: 290px;
   background: none;
   outline: none;
   border: none;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.1rem;
   color: #333;
+}
+
+.input-field.success {
+  border: 2px solid #2ecc71;
+}
+
+.input-field.error {
+  border: 2px solid #e74c3c;
+}
+
+.input-field.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.input-field.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.input-field.error small {
+  visibility: visible;
 }
 
 .input-field input::placeholder {
@@ -132,8 +171,7 @@ form.sign-in-form {
 .social-icon:hover {
   color: white;
   border-color: black;
-  background-color:#444;
-
+  background-color: #444;
 }
 
 .btn {
@@ -152,7 +190,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #B3BBBD;
+  background-color: #b3bbbd;
 }
 .panels-container {
   position: absolute;
@@ -402,4 +440,3 @@ form.sign-in-form {
     left: 50%;
   }
 }
-

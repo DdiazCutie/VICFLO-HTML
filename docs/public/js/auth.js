@@ -1,15 +1,27 @@
+const emailSignUp = document.getElementById('sign-up-email');
+const passwordSignUp = document.getElementById('sign-up-paswword');
 
+const emailSignIn = document.getElementById('sign-in-email');
+const passwordSignIn = document.getElementById('sign-in-password');
 
 const signUpForm = document.querySelector("#sign-up-form");
 signUpForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const email = signUpForm["sign-up-email"].value;
-  const password = signUpForm["sign-up-password"].value;
-
-  // Authenticate the User
-  auth.createUserWithEmailAndPassword(email, password).then((userCredential) => {
+  
+      checkInputsSignUp();
+      auth.createUserWithEmailAndPassword(email, password).then((userCredential) => {
       signUpForm.reset();
     });
+});
+
+const signInForm = document.querySelector("#sign-in-form");
+signInForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  
+    checkInputsSignIn();
+     auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
+     signInForm.reset();
+      });
 });
 
 auth.onAuthStateChanged((user) => {
@@ -17,27 +29,50 @@ auth.onAuthStateChanged((user) => {
       console.log("signin");
       window.location.href="index.html";
       loginCheck(user);
-      re
       }else {
         console.log("signout");
         loginCheck(user);
       }
 }); 
 
-const signInForm = document.querySelector("#sign-in-form");
-signInForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const email = signInForm["sign-in-email"].value;
-  const password = signInForm["sign-in-password"].value;
-
-  auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
-     signInForm.reset();
-  });
-});
 
 
+function checkInputsSignUp(){
+  const emailValue = emailSignUp.value.trim();
+  const passwordValue = passwordSignUp.value.trim();
 
-  
+  if(emailValue === ''){
+    setErrorFor(emailSignUp, 'El email no puede estar vacio');
+  }else if(!isEmail(emailSignUp)){
+    setErrorFor(emailSignUp, 'Correo no valido');
+  }else{
+    setSuccessFor(emailSignUp)
+  }
+}
+
+function checkInputsSignIn(){
+  const emailValue = emailSignIn.value.trim();
+  const passwordValue = passwordSignIn.value.trim();
+}
+
+function setErrorFor(input, message){
+  const inputField = input.parentElement;
+  const small = inputField.querySelector('small');
+
+  small.innerText = message;
+
+  inputField.className = 'input-field error';
+  small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const inputField = input.parentElement;
+	inputField.className = 'input-field success';
+}
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
 
 // Login with Google
 const googleButton = document.querySelector("#googleLogin");
@@ -73,11 +108,4 @@ facebookButton.addEventListener('click', e => {
   })
 
 })
-
-
-
-
-
-
-
 
